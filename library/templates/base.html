@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mini Biblioteca (Flask + POO simple)</title>
+  <title>Portal Brawl Stars</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
   <nav class="nav">
     <a href="{{ url_for('index') }}">Inicio</a>
-    <a href="{{ url_for('books') }}">Libros</a>
-    <a href="{{ url_for('members') }}">Miembros</a>
-    <a href="{{ url_for('loans') }}">Préstamos</a>
+    <a href="{{ url_for('books') }}">Brawlers</a>
+    <a href="{{ url_for('members') }}">Jugadores</a>
+    <a href="{{ url_for('loans') }}">Desbloqueos</a>
   </nav>
 
   {% with messages = get_flashed_messages(with_categories=true) %}
@@ -29,3 +29,5 @@
   </main>
 </body>
 </html>
+
+

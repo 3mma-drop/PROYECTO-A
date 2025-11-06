@@ -1,27 +1,12 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
-# Clase para representar un libro
 @dataclass
-class Book:
-    book_id: int           # Identificador único del libro
-    title: str             # Título del libro
-    author: str            # Autor
-    year: int              # Año de publicación
-    available: bool = field(default=True)  # Estado: disponible o prestado
+class Book:  # Usamos Book como Brawler
+    book_id: int
+    title: str  # nombre del brawler
 
-    def mark_borrowed(self):
-        """Marca el libro como prestado"""
-        if not self.available:
-            raise ValueError("El libro ya está prestado.")
-        self.available = False
-
-    def mark_returned(self):
-        """Marca el libro como disponible otra vez"""
-        self.available = True
-
-
-# Clase para representar un miembro de la biblioteca
 @dataclass
-class Member:
-    member_id: int   # Identificador único del miembro
-    name: str        # Nombre del miembro
+class Member:  # Usamos Member como votante
+    member_id: int
+    name: str
+    voted_brawler_id: int  # ID del brawler votado
